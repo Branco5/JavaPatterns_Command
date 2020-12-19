@@ -6,7 +6,7 @@
 package com.pa.patterns;
 
 
-import com.pa.patterns.command.UserInterface;
+import com.pa.patterns.command.*;
 
 /**
  *
@@ -19,7 +19,8 @@ public class MainTest {
      */
     public static void main(String[] args) {
 
-        new UserInterface().executeMenu();
+        new MessageUI().executeMenu();
     }
-    
+
+
 }

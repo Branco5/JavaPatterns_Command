@@ -1,19 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.pa.patterns.command;
 
 import com.pa.patterns.observer.Observer;
 
 import java.util.Scanner;
 
-
-/**
- * @author PM
- */
-public class UserInterface implements Observer {
+public class MessageUI implements Observer {
 
     private static final String FILENAME_OUT = "msgoOut.txt";
     private boolean saving;
@@ -23,7 +14,7 @@ public class UserInterface implements Observer {
     private final static Scanner sc = new Scanner(System.in);
 
 
-    public UserInterface() {
+    public MessageUI() {
         cmdManager = new CommandsManager();
         msg = new Message(" Esta é a primeira frase a ser alterada depois");
 
