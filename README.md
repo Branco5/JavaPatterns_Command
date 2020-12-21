@@ -1,7 +1,7 @@
 Java Patterns | Command
 ===
 
-**Commnad** é um *padrão comportamental* O padrão comando permite encapsular um comando ou pedido num objecto. Assim, os clientes podem ser parametrizados com comandos variados e os comandos podem ser manipulados para atingir vários fins:
+**Commmand** é um *padrão comportamental* O padrão comando permite encapsular um comando ou pedido num objecto. Assim, os clientes podem ser parametrizados com comandos variados e os comandos podem ser manipulados para atingir vários fins:
    - é possível atrasar a sua execução, colocá-los em filas de espera e registar a sua execução. 
    - é possível suportar a execução da inversão das acções das operações relativas a um comando (undo).
 
