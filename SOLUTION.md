@@ -1,46 +1,51 @@
 1.
 
 ```java
-public class CommandCodify extends CommandMessage {
+public class MessageCommandCodify extends MessageCommand {
 
-    public CommandCodify(Message msg) {
+    public MessageCommandCodify(Message msg) {
         super(msg);
     }
 
     @Override
     public void execute() {
-        String text = msg.getTxt();
-        text = text.replace("a", "?");
-        text = text.replace('i', '$');
-        text = text.replace('e', '£');
-        msg.setTxt(text);
-        msg.setDate();
-     }
+        char[] oldC={'a','i','e'};
+        char[] newC={'?','$','£'};
+        msg.codify(oldC,newC);
+    }
 
-  
+   
     @Override
     public String toString() {
-        return "CommandCodify{}" + msg;
-    }
+        return "MessageCommandCodify{}";    }
 }
 
+
 ``` 
-               
+Na classe Message, acrescentar
+```java
+   public void codify(char[] oldC, char[] newC) {
+        for(int i=0; i< oldC.length;i++)
+        {
+            txt=txt.replace(oldC[i],newC[i]);
+        }
+
+        notifyObservers(this);
+
+    }    
+```           
  
 3.  Acrescente na classe Command o método void unExecute().
       
 ComammandCodify
 ```java
 
-   @Override
-    public void unExecute() {
-        String text = msg.getTxt();
-        text = text.replace("?", "a");
-        text = text.replace('$', 'i');
-        text = text.replace('£', 'e');
-        msg.setTxt(text);
-        msg.setDate();
-    }
+ @Override
+     public void unExecute() {
+         char[] newC={'a','i','e'};
+         char[] oldC={'?','$','£'};
+         msg.codify(oldC,newC);
+     }
 ``` 
 CommandFormmat
 ```java
