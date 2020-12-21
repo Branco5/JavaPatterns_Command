@@ -15,8 +15,14 @@ package com.pa.patterns.command;
 /**
  * Command Pattern - Command
  */
-public interface  Command  {
+public abstract class CommandMessage implements Command{
 
-    void execute() ;
+    protected Message msg;
+
+    public CommandMessage(Message msg) {
+        this.msg = msg;
+    }
+
+
 
 }

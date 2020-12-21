@@ -7,6 +7,8 @@ package com.pa.patterns.command;
 
 import com.pa.patterns.observer.Subject;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Date;
 
 /**
@@ -51,4 +53,20 @@ public class Message extends Subject {
     }
 
 
+    public void writeToFile(String filename) {
+
+        FileWriter fw = null;
+        try {
+            fw = new FileWriter(filename, true);
+            fw.write(toString()+"\n");
+            fw.close();
+        } catch (IOException ex) {
+        } finally {
+            try {
+                fw.close();
+            } catch (IOException ex) {
+
+            }
+        }
+    }
 }

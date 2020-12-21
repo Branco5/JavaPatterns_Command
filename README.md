@@ -2,6 +2,7 @@ Java Patterns | Command
 ===
 
 **Command** é um *padrão comportamental*.
+
  O padrão Command permite encapsular operações ou pedido num objecto . Esta conversão permite:
   -  adiar a execução de operações (comandos), 
   -  armazenamento do histórico de operações, 

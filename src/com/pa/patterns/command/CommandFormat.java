@@ -15,7 +15,7 @@ package com.pa.patterns.command;
  * Format the message
  */
 
-public class CommandFormat extends Command {
+public class CommandFormat extends CommandMessage {
 
     public CommandFormat(Message msg) {
         super(msg);
@@ -29,6 +29,6 @@ public class CommandFormat extends Command {
 
      @Override
     public String toString() {
-        return "CommandFormat{}" + msg;
+        return "CommandFormat{}";
     }
 }

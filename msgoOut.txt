@@ -1,5 +1,1 @@
-Message{txt=?OLA?AMA.HA, date=Sat Dec 19 14:52:49 GMT 2020}
-Message{txt=?ola?ama.ha, date=Sat Dec 19 14:58:49 GMT 2020}
-Message{txt=?hoje?é?dia?de?Natal, date=Sat Dec 19 14:59:00 GMT 2020}
-Message{txt=-----ol? bom d$?-----, date=Sat Dec 19 16:40:17 GMT 2020}
-Message{txt=-----ola bom dia-----, date=Sat Dec 19 17:09:06 GMT 2020}
+

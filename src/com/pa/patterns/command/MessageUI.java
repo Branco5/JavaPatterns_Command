@@ -17,6 +17,7 @@ public class MessageUI implements Observer {
     public MessageUI() {
         cmdManager = new CommandsManager();
         msg = new Message(" Esta é a primeira frase a ser alterada depois");
+        msg.addObservers(this);
 
     }
 

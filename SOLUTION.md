@@ -1,7 +1,7 @@
 1.
 
 ```java
-public class CommandCodify extends Command {
+public class CommandCodify extends CommandMessage {
 
     public CommandCodify(Message msg) {
         super(msg);

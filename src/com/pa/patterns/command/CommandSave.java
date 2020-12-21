@@ -18,7 +18,7 @@ import java.io.IOException;
  * Concrete Command
  * Save the contens of the message in a file
  */
-public class CommandSave extends Command {
+public class CommandSave extends CommandMessage {
 
     private String filename;
     
@@ -31,19 +31,7 @@ public class CommandSave extends Command {
 
     @Override
     public void execute() {
-        FileWriter fw = null;
-        try {
-            fw = new FileWriter(filename, true);
-            fw.write(msg.toString()+"\n");
-            fw.close();
-        } catch (IOException ex) {
-        } finally {
-            try {
-                fw.close();
-            } catch (IOException ex) {
-
-            }
-        }
+       msg.writeToFile(filename);
    
     }
 
@@ -52,6 +40,6 @@ public class CommandSave extends Command {
     public String toString() {
         return "CommandSave{" +
                 "filename='" + filename + '\'' +
-                '}' + msg;
+                '}';
     }
 }

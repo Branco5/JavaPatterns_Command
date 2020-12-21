@@ -14,7 +14,7 @@ package com.pa.patterns.command;
  * Concrete Command
  * Create a new information for the message
  */
-public class CommandNew extends Command {
+public class CommandNew extends CommandMessage {
 
     public String text;
 
@@ -33,6 +33,6 @@ public class CommandNew extends Command {
 
     @Override
     public String toString() {
-        return "CommandNew{}" + msg;
+        return "CommandNew{}";
     }
 }
